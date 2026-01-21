@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lumoruby.github.io/psychologicaltest/sitemap.xml

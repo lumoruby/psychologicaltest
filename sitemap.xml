@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://lumoruby.github.io/psychologicaltest/index.html</loc>
+    <lastmod>2024-01-21</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://lumoruby.github.io/psychologicaltest/about.html</loc>
+    <lastmod>2024-01-21</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://lumoruby.github.io/psychologicaltest/privacy.html</loc>
+    <lastmod>2024-01-21</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://lumoruby.github.io/psychologicaltest/results.html</loc>
+    <lastmod>2024-01-21</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://lumoruby.github.io/psychologicaltest/terms.html</loc>
+    <lastmod>2024-01-21</lastmod>
+    <priority>0.80</priority>
+  </url>
+</urlset>
