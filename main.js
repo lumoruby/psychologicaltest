@@ -49,6 +49,7 @@ function t(key) {
     if (window.i18n && window.i18n.t) {
         return window.i18n.t(key);
     }
+    // Fallback for when i18n is not ready
     return key;
 }
 
@@ -77,7 +78,9 @@ document.addEventListener('DOMContentLoaded', () => {
 function startTest() {
     // Hide start screen
     const startScreen = document.querySelector('.start-screen');
-    startScreen.style.display = 'none';
+    if (startScreen) {
+        startScreen.style.display = 'none';
+    }
 
     // Reset test state
     currentQuestionIndex = 0;
@@ -90,6 +93,7 @@ function startTest() {
 }
 
 function renderQuestion(index) {
+    if (!app) return;
     if (index >= testData.questions.length) {
         // End of test, calculate result
         calculateResult();
@@ -98,14 +102,14 @@ function renderQuestion(index) {
 
     const questionData = testData.questions[index];
     const questionElement = document.createElement('div');
-    questionElement.classList.add('question-container');
+    questionElement.className = 'question-container fade-in';
 
     questionElement.innerHTML = `
         <p class="progress-bar">(${index + 1}/${testData.questions.length})</p>
-        <h2>${t(questionData.qKey)}</h2>
+        <h2 data-i18n="${questionData.qKey}">${t(questionData.qKey)}</h2>
         <div class="answer-buttons">
-            <button class="answer-btn" data-type="${questionData.aKeys[0].type}">${t(questionData.aKeys[0].key)}</button>
-            <button class="answer-btn" data-type="${questionData.aKeys[1].type}">${t(questionData.aKeys[1].key)}</button>
+            <button class="answer-btn" data-type="${questionData.aKeys[0].type}" data-i18n="${questionData.aKeys[0].key}">${t(questionData.aKeys[0].key)}</button>
+            <button class="answer-btn" data-type="${questionData.aKeys[1].type}" data-i18n="${questionData.aKeys[1].key}">${t(questionData.aKeys[1].key)}</button>
         </div>
     `;
 
@@ -115,7 +119,7 @@ function renderQuestion(index) {
     document.querySelectorAll('.answer-btn').forEach(button => {
         button.addEventListener('click', (e) => {
             const type = e.target.getAttribute('data-type');
-
+            
             // Add a subtle animation
             e.target.classList.add('selected');
 
@@ -142,22 +146,29 @@ function calculateResult() {
 }
 
 function showResult(resultCode) {
+    if (!app) return;
     lastResultCode = resultCode;
     const resultData = testData.results[resultCode];
+    if (!resultData) {
+        console.error("Result code not found:", resultCode);
+        app.innerHTML = `<p>Error: Result not found.</p>`;
+        return;
+    }
+
     const title = t(resultData.titleKey);
     const description = t(resultData.descKey);
 
     const resultElement = document.createElement('div');
-    resultElement.classList.add('result-container');
+    resultElement.className = 'result-container fade-in';
 
     resultElement.innerHTML = `
-        <h1>${t('result_heading')}</h1>
-        <h2>${title}</h2>
+        <h1 data-i18n="result_heading">${t('result_heading')}</h1>
+        <h2 data-i18n="${resultData.titleKey}">${title}</h2>
         <img src="${resultData.image}" alt="${title}" class="result-image">
-        <p>${description}</p>
+        <p data-i18n="${resultData.descKey}">${description}</p>
         <div class="result-buttons">
-            <button onclick="location.reload()">${t('result_retry')}</button>
-            <button onclick="location.href='results.html'">${t('result_view_all')}</button>
+            <button onclick="location.href='index.html'" data-i18n="result_retry">${t('result_retry')}</button>
+            <button onclick="location.href='results.html'" data-i18n="result_view_all">${t('result_view_all')}</button>
         </div>
     `;
 
