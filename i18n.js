@@ -386,6 +386,9 @@ function setLang(lang) {
     document.documentElement.lang = lang;
     updatePageContent();
     updateLangToggle();
+
+    // Dispatch custom event for dynamic content (like test questions)
+    window.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang } }));
 }
 
 // Toggle language

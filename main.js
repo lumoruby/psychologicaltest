@@ -52,11 +52,26 @@ function t(key) {
     return key;
 }
 
+// Track current test state
+let testInProgress = false;
+let lastResultCode = null;
+
 document.addEventListener('DOMContentLoaded', () => {
     const startBtn = document.getElementById('start-btn');
     if (startBtn) {
         startBtn.addEventListener('click', startTest);
     }
+
+    // Listen for language changes to re-render current screen
+    window.addEventListener('languageChanged', () => {
+        if (testInProgress && lastResultCode) {
+            // Re-render result screen
+            showResult(lastResultCode);
+        } else if (testInProgress && currentQuestionIndex < testData.questions.length) {
+            // Re-render current question
+            renderQuestion(currentQuestionIndex);
+        }
+    });
 });
 
 function startTest() {
@@ -67,6 +82,8 @@ function startTest() {
     // Reset test state
     currentQuestionIndex = 0;
     Object.keys(userAnswers).forEach(key => userAnswers[key] = 0);
+    testInProgress = true;
+    lastResultCode = null;
 
     // Render the first question
     renderQuestion(currentQuestionIndex);
@@ -125,6 +142,7 @@ function calculateResult() {
 }
 
 function showResult(resultCode) {
+    lastResultCode = resultCode;
     const resultData = testData.results[resultCode];
     const title = t(resultData.titleKey);
     const description = t(resultData.descKey);
