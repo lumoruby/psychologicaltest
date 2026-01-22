@@ -365,23 +365,28 @@ const translations = {
     }
 };
 
-// Current language state
+// Current language state - store on window for guaranteed access
 let currentLang = localStorage.getItem('lang') || 'ko';
 
-// Translation function
+// Translation function - always reads current language
 function t(key) {
-    return translations[currentLang][key] || translations['ko'][key] || key;
+    const lang = window.i18n ? window.i18n.currentLang : currentLang;
+    return translations[lang][key] || translations['ko'][key] || key;
 }
 
 // Get current language
 function getLang() {
-    return currentLang;
+    return window.i18n ? window.i18n.currentLang : currentLang;
 }
 
 // Set language and update UI
 function setLang(lang) {
     if (lang !== 'ko' && lang !== 'en') return;
     currentLang = lang;
+    // Update window.i18n.currentLang for guaranteed access from other scripts
+    if (window.i18n) {
+        window.i18n.currentLang = lang;
+    }
     localStorage.setItem('lang', lang);
     document.documentElement.lang = lang;
     updatePageContent();
@@ -458,4 +463,4 @@ if (document.readyState === 'loading') {
 }
 
 // Export for use in other scripts
-window.i18n = { t, getLang, setLang, toggleLang, translations };
+window.i18n = { t, getLang, setLang, toggleLang, translations, currentLang };
