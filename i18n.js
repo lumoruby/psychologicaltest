@@ -438,6 +438,10 @@ function updatePageContent() {
 function initI18n() {
     // Set initial language from localStorage or default to 'ko'
     currentLang = localStorage.getItem('lang') || 'ko';
+    // Ensure window.i18n.currentLang is also updated
+    if (window.i18n) {
+        window.i18n.currentLang = currentLang;
+    }
     document.documentElement.lang = currentLang;
 
     // Create and insert language toggle button if header nav exists
