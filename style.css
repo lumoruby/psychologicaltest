@@ -105,6 +105,27 @@ nav ul li a:hover {
     color: var(--accent-color);
 }
 
+/* Language Toggle Button */
+.lang-toggle-btn {
+    font-family: var(--font-family);
+    background-color: transparent;
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: none;
+    margin-left: 1rem;
+}
+
+.lang-toggle-btn:hover {
+    background-color: var(--text-color);
+    color: white;
+    transform: none;
+}
+
 /* Footer */
 footer {
     width: 100%;
@@ -347,6 +368,13 @@ button:hover {
 
     nav ul li a {
         font-size: 0.95rem;
+    }
+
+    .lang-toggle-btn {
+        margin-left: 0;
+        margin-top: 0.5rem;
+        padding: 0.3rem 0.6rem;
+        font-size: 0.85rem;
     }
 
     main {

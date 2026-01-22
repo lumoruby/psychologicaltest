@@ -79,32 +79,34 @@
 <body>
     <header>
         <nav>
-            <a href="index.html" class="logo">마음의 색깔</a>
+            <a href="index.html" class="logo" data-i18n="brand">마음의 색깔</a>
             <ul>
-                <li><a href="about.html">소개</a></li>
-                <li><a href="results.html">결과 유형</a></li>
-                <li><a href="privacy.html">개인정보처리방침</a></li>
-                <li><a href="terms.html">이용약관</a></li>
+                <li><a href="about.html" data-i18n="nav_about">소개</a></li>
+                <li><a href="results.html" data-i18n="nav_results">결과 유형</a></li>
+                <li><a href="privacy.html" data-i18n="nav_privacy">개인정보처리방침</a></li>
+                <li><a href="terms.html" data-i18n="nav_terms">이용약관</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="error-container">
         <p class="error-code">404</p>
-        <h1 class="error-message">페이지를 찾을 수 없습니다</h1>
-        <p class="error-description">
+        <h1 class="error-message" data-i18n="error_404_title">페이지를 찾을 수 없습니다</h1>
+        <p class="error-description" data-i18n="error_404_desc">
             요청하신 페이지가 존재하지 않거나, 이동되었거나, 삭제되었을 수 있습니다.<br>
             아래 링크를 통해 원하시는 페이지로 이동해 주세요.
         </p>
         <div class="error-links">
-            <a href="index.html">테스트 시작하기</a>
-            <a href="results.html" class="secondary">결과 유형 보기</a>
-            <a href="about.html" class="secondary">서비스 소개</a>
+            <a href="index.html" data-i18n="error_404_start">테스트 시작하기</a>
+            <a href="results.html" class="secondary" data-i18n="error_404_results">결과 유형 보기</a>
+            <a href="about.html" class="secondary" data-i18n="error_404_about">서비스 소개</a>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 마음의 색깔. All Rights Reserved.</p>
+        <p data-i18n="footer_copyright">&copy; 2026 마음의 색깔. All Rights Reserved.</p>
     </footer>
+
+    <script src="i18n.js"></script>
 </body>
 </html>

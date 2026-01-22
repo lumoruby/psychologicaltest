@@ -70,29 +70,30 @@
 <body>
     <header>
         <nav>
-            <a href="index.html" class="logo">마음의 색깔</a>
+            <a href="index.html" class="logo" data-i18n="brand">마음의 색깔</a>
             <ul>
-                <li><a href="about.html">소개</a></li>
-                <li><a href="results.html">결과 유형</a></li>
-                <li><a href="privacy.html">개인정보처리방침</a></li>
-                <li><a href="terms.html">이용약관</a></li>
+                <li><a href="about.html" data-i18n="nav_about">소개</a></li>
+                <li><a href="results.html" data-i18n="nav_results">결과 유형</a></li>
+                <li><a href="privacy.html" data-i18n="nav_privacy">개인정보처리방침</a></li>
+                <li><a href="terms.html" data-i18n="nav_terms">이용약관</a></li>
             </ul>
         </nav>
     </header>
 
     <main id="app">
         <div class="start-screen">
-            <h1>나의 마음 색깔은 무엇일까?</h1>
-            <p>스무고개 질문으로 알아보는 나의 진짜 성향</p>
-            <img src="https://images.pexels.com/photos/176851/pexels-photo-176851.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="따뜻한 느낌의 다양한 색깔의 실타래" class="main-image">
-            <button id="start-btn">테스트 시작하기</button>
+            <h1 data-i18n="index_title">나의 마음 색깔은 무엇일까?</h1>
+            <p data-i18n="index_subtitle">스무고개 질문으로 알아보는 나의 진짜 성향</p>
+            <img src="https://images.pexels.com/photos/176851/pexels-photo-176851.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" data-i18n-alt="index_img_alt" alt="따뜻한 느낌의 다양한 색깔의 실타래" class="main-image">
+            <button id="start-btn" data-i18n="index_start_btn">테스트 시작하기</button>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 마음의 색깔. All Rights Reserved.</p>
+        <p data-i18n="footer_copyright">&copy; 2026 마음의 색깔. All Rights Reserved.</p>
     </footer>
 
+    <script src="i18n.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
