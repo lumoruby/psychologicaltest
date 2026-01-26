@@ -161,11 +161,28 @@ function showResult(resultCode) {
     const resultElement = document.createElement('div');
     resultElement.className = 'result-container fade-in';
 
+    const shareText = window.i18n && window.i18n.currentLang === 'en'
+        ? `My Color of Mind is "${title}"! Take the test and find yours!`
+        : `나의 마음의 색깔은 "${title}"입니다! 테스트하고 당신의 색깔을 찾아보세요!`;
+
     resultElement.innerHTML = `
         <h1 data-i18n="result_heading">${t('result_heading')}</h1>
         <h2 data-i18n="${resultData.titleKey}">${title}</h2>
         <img src="${resultData.image}" alt="${title}" class="result-image">
         <p data-i18n="${resultData.descKey}">${description}</p>
+        <div class="share-section">
+            <p class="share-label" data-i18n="result_share">${t('result_share')}</p>
+            <div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="https://psychologicaltest.pages.dev/" data-a2a-title="${shareText}">
+                <a class="a2a_button_facebook"></a>
+                <a class="a2a_button_x"></a>
+                <a class="a2a_button_line"></a>
+                <a class="a2a_button_whatsapp"></a>
+                <a class="a2a_button_facebook_messenger"></a>
+                <a class="a2a_button_email"></a>
+                <a class="a2a_button_copy_link"></a>
+                <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+            </div>
+        </div>
         <div class="result-buttons">
             <button onclick="location.href='index.html'" data-i18n="result_retry">${t('result_retry')}</button>
             <button onclick="location.href='results.html'" data-i18n="result_view_all">${t('result_view_all')}</button>
@@ -174,4 +191,9 @@ function showResult(resultCode) {
 
     app.innerHTML = '';
     app.appendChild(resultElement);
+
+    // Reinitialize AddToAny for dynamically added buttons
+    if (window.a2a) {
+        window.a2a.init_all();
+    }
 }

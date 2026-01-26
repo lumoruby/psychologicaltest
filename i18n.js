@@ -65,6 +65,8 @@ const translations = {
         result_heading: "당신의 마음 색깔은...",
         result_retry: "다시하기",
         result_view_all: "전체 결과 유형 보기",
+        result_share: "결과 공유하기",
+        blog_share: "이 글 공유하기",
 
         // Questions
         q1: "주말 저녁, 당신의 선택은?",
@@ -179,7 +181,64 @@ const translations = {
         error_404_desc: "요청하신 페이지가 존재하지 않거나, 이동되었거나, 삭제되었을 수 있습니다.<br>아래 링크를 통해 원하시는 페이지로 이동해 주세요.",
         error_404_start: "테스트 시작하기",
         error_404_results: "결과 유형 보기",
-        error_404_about: "서비스 소개"
+        error_404_about: "서비스 소개",
+
+        // Blog
+        nav_blog: "블로그",
+        blog_title: "심리학 블로그",
+        blog_subtitle: "마음의 색깔과 함께하는 심리학 이야기",
+        blog_read_more: "자세히 보기",
+        blog_back_to_list: "목록으로 돌아가기",
+
+        // Blog post 1
+        blog_post1_title: "심리테스트의 역사와 기원",
+        blog_post1_summary: "고대부터 현대까지, 인류가 마음을 이해하기 위해 발전시켜온 심리테스트의 흥미로운 역사를 알아봅니다.",
+        blog_post1_date: "2026년 1월 20일",
+
+        // Blog post 2
+        blog_post2_title: "색채 심리학: 색깔이 감정에 미치는 영향",
+        blog_post2_summary: "빨간색은 열정, 파란색은 평화? 색깔이 우리의 기분과 행동에 어떤 영향을 미치는지 과학적으로 살펴봅니다.",
+        blog_post2_date: "2026년 1월 19일",
+
+        // Blog post 3
+        blog_post3_title: "성격 유형 테스트의 과학적 원리",
+        blog_post3_summary: "MBTI부터 빅파이브까지, 성격 유형 테스트가 어떤 심리학적 이론에 기반하는지 깊이 있게 탐구합니다.",
+        blog_post3_date: "2026년 1월 18일",
+
+        // Blog post 4
+        blog_post4_title: "내향인과 외향인: 당신은 어느 쪽?",
+        blog_post4_summary: "내향성과 외향성의 차이점, 각 성향의 장점, 그리고 자신의 성향을 이해하고 활용하는 방법을 알아봅니다.",
+        blog_post4_date: "2026년 1월 17일",
+
+        // Blog post 5
+        blog_post5_title: "스트레스 관리와 마음 건강",
+        blog_post5_summary: "현대인의 필수 과제인 스트레스 관리! 심리학적 관점에서 효과적인 스트레스 해소법을 소개합니다.",
+        blog_post5_date: "2026년 1월 16일",
+
+        // Blog post 6
+        blog_post6_title: "자기 이해를 위한 심리학 입문",
+        blog_post6_summary: "나를 더 잘 알기 위한 첫걸음, 심리학의 기초 개념과 자기 탐색의 중요성에 대해 이야기합니다.",
+        blog_post6_date: "2026년 1월 15일",
+
+        // Blog post 7
+        blog_post7_title: "감정 지능(EQ)이란 무엇인가?",
+        blog_post7_summary: "IQ만큼 중요한 EQ! 감정 지능의 개념과 이를 발달시키는 방법을 알아봅니다.",
+        blog_post7_date: "2026년 1월 14일",
+
+        // Blog post 8
+        blog_post8_title: "인간관계를 개선하는 심리학적 조언",
+        blog_post8_summary: "더 나은 관계를 위한 심리학적 통찰! 소통, 공감, 갈등 해결에 대한 실용적인 조언을 드립니다.",
+        blog_post8_date: "2026년 1월 13일",
+
+        // Blog post 9
+        blog_post9_title: "명상과 마음챙김이 주는 효과",
+        blog_post9_summary: "과학이 입증한 명상의 효과! 마음챙김 명상이 뇌와 정신 건강에 미치는 긍정적인 영향을 살펴봅니다.",
+        blog_post9_date: "2026년 1월 12일",
+
+        // Blog post 10
+        blog_post10_title: "긍정 심리학: 행복을 찾는 과학",
+        blog_post10_summary: "행복도 연습이 된다? 긍정 심리학의 핵심 원리와 일상에서 실천할 수 있는 행복 습관을 소개합니다.",
+        blog_post10_date: "2026년 1월 11일"
     },
 
     en: {
@@ -247,6 +306,8 @@ const translations = {
         result_heading: "Your Color of Mind is...",
         result_retry: "Try Again",
         result_view_all: "View All Result Types",
+        result_share: "Share Your Result",
+        blog_share: "Share This Article",
 
         // Questions
         q1: "On a weekend evening, your choice is?",
@@ -361,7 +422,64 @@ const translations = {
         error_404_desc: "The page you requested may not exist, may have been moved, or may have been deleted.<br>Please use the links below to navigate to the page you want.",
         error_404_start: "Start Test",
         error_404_results: "View Result Types",
-        error_404_about: "About Service"
+        error_404_about: "About Service",
+
+        // Blog
+        nav_blog: "Blog",
+        blog_title: "Psychology Blog",
+        blog_subtitle: "Exploring Psychology with Color of Mind",
+        blog_read_more: "Read More",
+        blog_back_to_list: "Back to List",
+
+        // Blog post 1
+        blog_post1_title: "The History and Origins of Psychological Tests",
+        blog_post1_summary: "From ancient times to the modern era, explore the fascinating history of psychological tests that humanity has developed to understand the mind.",
+        blog_post1_date: "January 20, 2026",
+
+        // Blog post 2
+        blog_post2_title: "Color Psychology: How Colors Affect Our Emotions",
+        blog_post2_summary: "Red for passion, blue for peace? Let's scientifically examine how colors influence our mood and behavior.",
+        blog_post2_date: "January 19, 2026",
+
+        // Blog post 3
+        blog_post3_title: "The Scientific Principles Behind Personality Tests",
+        blog_post3_summary: "From MBTI to the Big Five, explore the psychological theories that form the foundation of personality type tests.",
+        blog_post3_date: "January 18, 2026",
+
+        // Blog post 4
+        blog_post4_title: "Introverts and Extroverts: Which One Are You?",
+        blog_post4_summary: "Learn about the differences between introversion and extroversion, the strengths of each, and how to understand and leverage your personality.",
+        blog_post4_date: "January 17, 2026",
+
+        // Blog post 5
+        blog_post5_title: "Stress Management and Mental Health",
+        blog_post5_summary: "Stress management is essential for modern life! We introduce effective stress relief methods from a psychological perspective.",
+        blog_post5_date: "January 16, 2026",
+
+        // Blog post 6
+        blog_post6_title: "Introduction to Psychology for Self-Understanding",
+        blog_post6_summary: "The first step to knowing yourself better. We discuss the basic concepts of psychology and the importance of self-exploration.",
+        blog_post6_date: "January 15, 2026",
+
+        // Blog post 7
+        blog_post7_title: "What is Emotional Intelligence (EQ)?",
+        blog_post7_summary: "EQ is just as important as IQ! Learn about the concept of emotional intelligence and how to develop it.",
+        blog_post7_date: "January 14, 2026",
+
+        // Blog post 8
+        blog_post8_title: "Psychological Tips for Better Relationships",
+        blog_post8_summary: "Psychological insights for better relationships! Practical advice on communication, empathy, and conflict resolution.",
+        blog_post8_date: "January 13, 2026",
+
+        // Blog post 9
+        blog_post9_title: "The Benefits of Meditation and Mindfulness",
+        blog_post9_summary: "Science-backed benefits of meditation! Explore the positive effects of mindfulness meditation on the brain and mental health.",
+        blog_post9_date: "January 12, 2026",
+
+        // Blog post 10
+        blog_post10_title: "Positive Psychology: The Science of Finding Happiness",
+        blog_post10_summary: "Can happiness be practiced? We introduce the core principles of positive psychology and happiness habits you can implement in daily life.",
+        blog_post10_date: "January 11, 2026"
     }
 };
 
